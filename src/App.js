@@ -2,15 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-  
-       
-        <p>
-          Hello world
+function clickMe(){alert("hello world")}
 
-        </p>
-     
+  return (   
+  
+     <div>
+       <button onClick={clickMe}>
+         Hello World
+       </button>
+     </div> 
   );
 }
+
+
+
+
 
 export default App;
