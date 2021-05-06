@@ -1,8 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-function clickMe(){alert("hello world")}
+  const clickMe = () => {
+    window.alert('Hello world')
+  }
 
   return (   
   
@@ -13,8 +14,6 @@ function clickMe(){alert("hello world")}
      </div> 
   );
 }
-
-
 
 
 
