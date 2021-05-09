@@ -6,12 +6,26 @@ function App() {
     window.alert('Hello world')
   }
 
-  const name = 'takuma';
+  const [name, setName] = useState('takuma');
   const [count, setCount] = useState(0);
   const increment = () => {
     setCount(count + 1);
     console.log(count);
   };
+  const decrement = () => {
+    setCount(count - 1);
+    console.log(count);
+  }
+  const liset = () => {
+    setCount(0);
+    console.log(count)
+  }
+  const add = () => {
+    setName(name + 'takuma')
+    console.log(name);
+  }
+
+
 
 
 
@@ -19,10 +33,14 @@ function App() {
   return (
     <div>
       <button onClick={increment}>いいね！</button>
+      <button onClick={decrement}>よくないね！</button>
+      <button onClick={liset}>リセット</button>
       {count}
 
-
-
+      <div>
+        <button onClick={add}>add</button>
+        {name}
+      </div>
 
       <div>
         <button onClick={clickMe}>
@@ -39,7 +57,7 @@ function App() {
 
           <input type="text" />
           <a href="#">a タグ</a>
-          {name}
+
         </div>
       </div>
     </div>
