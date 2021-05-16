@@ -1,75 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
+import Card from './Card';
+
+
+const sampleArray = [
+  { id: 1, name: 'aaa', date: 19920527 },
+  { id: 2, name: 'bbb', date: 19920528 },
+  { id: 3, name: 'ccc', date: 19920529 },
+  { id: 4, name: 'ddd', date: 19920531 },
+  { id: 5, name: 'eee', date: 19920501 }
+];
+
+
 
 function App() {
-  const clickMe = () => {
-    window.alert('Hello world')
-  }
-
-  const [name, setName] = useState('takuma');
-  const [count, setCount] = useState(0);
-  const increment = () => {
-    setCount(count + 1);
-    console.log(count);
-  };
-  const decrement = () => {
-    setCount(count - 1);
-    console.log(count);
-  }
-  const liset = () => {
-    setCount(0);
-    console.log(count)
-  }
-  const add = () => {
-    setName(name + 'takuma')
-    console.log(name);
-  }
-
-
-
-
-
-
   return (
     <div>
-      <button onClick={increment}>いいね！</button>
-      <button onClick={decrement}>よくないね！</button>
-      <button onClick={liset}>リセット</button>
-      {count}
-
-      <div>
-        <button onClick={add}>add</button>
-        {name}
-      </div>
-
-      <div>
-        <button onClick={clickMe}>
-          Hello World
-       </button>
-        <div>
-          <h1>Hello world</h1>
-          <h2>Hello world</h2>
-          <h3>Hello world</h3>
-          <h4>Hello world</h4>
-          <button
-            onClick={() => window.alert("Hello world")}>button</button>
-
-
-          <input type="text" />
-          <a href="#">a タグ</a>
-
-        </div>
-      </div>
+      {sampleArray.map((data, index) => {
+        console.log(data);
+        return <Card key={index} name={data.name} date={data.date} />
+      })}
     </div>
   );
 }
 
 
-
-
-
-
-
-
-
 export default App;
+
