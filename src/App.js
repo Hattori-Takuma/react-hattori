@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Card from './Card';
+import Table from './Table';
 
 
 const sampleArray = [
@@ -20,6 +21,20 @@ function App() {
         console.log(data);
         return <Card key={index} id={data.id} name={data.name} date={data.date} />
       })}
+      <table>
+        <tr>
+          <th>id </th>
+          <th>name </th>
+          <th>date </th>
+        </tr>
+        {sampleArray.map((data, index) => {
+          console.log(data);
+          return <Table key={index} id={data.id} name={data.name} date={data.date} />
+
+
+        })}
+      </table>
+
     </div>
   );
 
