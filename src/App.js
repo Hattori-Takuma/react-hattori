@@ -18,11 +18,14 @@ function App() {
     <div>
       {sampleArray.map((data, index) => {
         console.log(data);
-        return <Card key={index} name={data.name} date={data.date} />
+        return <Card key={index} id={data.id} name={data.name} date={data.date} />
       })}
     </div>
   );
+
 }
+
+
 
 
 export default App;
