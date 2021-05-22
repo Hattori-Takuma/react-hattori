@@ -16,7 +16,7 @@ const ComponentB = () => {
       <div>
         ComponentB
     </div>
-      <button onClick={backPage}>ホームへ戻る</button>
+      <Button onClick={backPage}>ホームへ戻る</Button>
       <Link to="componentc" >ConponentCへ移動</Link>
 
       <Table striped bordered hover variant="dark">
