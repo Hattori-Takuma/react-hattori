@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
+
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import ComponentC from './ComponentC';
-import ComponentB from './ComponentB';
-import ComponentA from './ComponentA';
+import ComponentC from './components/ComponentC';
+import ComponentB from './components/ComponentB';
+import ComponentA from './components/ComponentA';
 
 
 

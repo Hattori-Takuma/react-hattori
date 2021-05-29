@@ -16,3 +16,5 @@ cssから.jsに適応させる
       react-Boottrap
       bootdom(ページ動かす)
       boot
+
+      git check out (無かったことに)
