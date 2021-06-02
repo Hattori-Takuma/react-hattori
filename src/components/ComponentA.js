@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Table } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 
 
 
@@ -32,6 +32,7 @@ const ComponentA = () => {
 
 
 
+
   return (
     <div>
       <div>
@@ -39,7 +40,8 @@ const ComponentA = () => {
     </div>
       <Link to="componentb">ComponentBへ移動</Link>
       <div>count : {count}</div>
-      <button onClick={increment}>up</button>
+
+      <Button variant="info" onClick={increment}>up</Button>{' '}
 
       <Table striped bordered hover>
         <thead>
@@ -53,8 +55,9 @@ const ComponentA = () => {
         <tbody>
           {
             data && data.map((d, index) => {
+
               return (
-                <tr>
+                <tr key={index}>
                   <td>{d.id}</td>
                   <td>{d.userId}</td>
                   <td>{d.title}</td>

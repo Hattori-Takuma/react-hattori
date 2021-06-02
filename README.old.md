@@ -18,3 +18,15 @@ cssから.jsに適応させる
       boot
 
       git check out (無かったことに)
+
+
+
+
+  const getData = () => {
+
+    axios.get('https://jsonplaceholder.typicode.com/posts')
+      .then(res => {
+        console.log(res)
+        setData(res.data)
+      })
+  }
