@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, RESET, ADD_EVENT } from '../actions/index'
+import { INCREMENT, DECREMENT, RESET, ADD_EVENT, } from '../actions/index'
 
 
 const reducer = (state = [], action) => {
@@ -13,6 +13,9 @@ const reducer = (state = [], action) => {
       const event = { title: action.title, body: action.body };
       const id = state.length + 1;
       return [...state, { id, ...event }];
+
+
+
 
     default:
       return state;
