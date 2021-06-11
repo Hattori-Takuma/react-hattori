@@ -15,7 +15,7 @@ const reducer = (state = [], action) => {
       return [...state, { id, ...event }];
     case ALL_DELET:
       const delet = {};
-      return [...state, { delet }];
+      return [{ delet }];
 
 
 

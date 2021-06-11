@@ -30,8 +30,8 @@ const ComponentB = () => {
     setComponent('');
   };
 
-  const handleClick2 = (delet) => {
-    delet.preventDefault();
+  const handleClick2 = (e) => {
+    e.preventDefault();
 
     dispatch({
       type: ALL_DELET,
@@ -41,6 +41,7 @@ const ComponentB = () => {
 
     setTitle('');
     setBody('');
+    setComponent('');
   };
 
 
