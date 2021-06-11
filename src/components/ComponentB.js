@@ -1,6 +1,6 @@
 import React, { useReducer, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ADD_EVENT } from '../actions/index';
+import { ADD_EVENT, ALL_DELET } from '../actions/index';
 import reducer from '../reducers/index';
 import { Button, Form, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,12 +13,28 @@ const ComponentB = () => {
   const [state, dispatch] = useReducer(reducer, []);
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
+  const [component, setComponent] = useState('');
 
   const handleClick = (e) => {
     e.preventDefault();
 
     dispatch({
       type: ADD_EVENT,
+      title,
+      body,
+      component
+    });
+
+    setTitle('');
+    setBody('');
+    setComponent('');
+  };
+
+  const handleClick2 = (delet) => {
+    delet.preventDefault();
+
+    dispatch({
+      type: ALL_DELET,
       title,
       body
     });
@@ -54,11 +70,18 @@ const ComponentB = () => {
             value={body}
             onChange={(e) => setBody(e.target.value)}
           />
+          <Form.Label>Component</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="component"
+            value={component}
+            onChange={(e) => setComponent(e.target.value)}
+          />
         </Form.Group>
         <Button variant="primary" onClick={handleClick}>
           イベント作成
 </Button>
-        <Button variant="danger" onClick={handleClick}>
+        <Button variant="danger" onClick={handleClick2}>
           イベント全削除
 </Button>
       </Form>
@@ -70,6 +93,7 @@ const ComponentB = () => {
             <th>id</th>
             <th>title</th>
             <th>body</th>
+            <th>component</th>
             <th>#</th>
           </tr>
         </thead>
@@ -80,6 +104,7 @@ const ComponentB = () => {
                 <td>{data.id}</td>
                 <td>{data.title}</td>
                 <td>{data.body}</td>
+                <td>{data.component}</td>
                 <td>
                   <Button variant="danger">削除</Button>
                 </td>
