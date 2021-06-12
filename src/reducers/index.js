@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, RESET, ADD_EVENT, ALL_DELET } from '../actions/index'
+import { INCREMENT, DECREMENT, RESET, ADD_EVENT, ALL_DELET, POINT_DELET } from '../actions/index'
 
 
 const reducer = (state = [], action) => {
@@ -14,8 +14,11 @@ const reducer = (state = [], action) => {
       const id = state.length + 1;
       return [...state, { id, ...event }];
     case ALL_DELET:
-      const delet = {};
-      return [{ delet }];
+
+      return [];
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 import React, { useReducer, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ADD_EVENT, ALL_DELET } from '../actions/index';
+import { ADD_EVENT, ALL_DELET, POINT_DELET } from '../actions/index';
 import reducer from '../reducers/index';
 import { Button, Form, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -36,7 +36,8 @@ const ComponentB = () => {
     dispatch({
       type: ALL_DELET,
       title,
-      body
+      body,
+      component
     });
 
     setTitle('');
@@ -107,7 +108,7 @@ const ComponentB = () => {
                 <td>{data.body}</td>
                 <td>{data.component}</td>
                 <td>
-                  <Button variant="danger">削除</Button>
+                  <Button variant="danger" >削除</Button>
                 </td>
               </tr>
             );
