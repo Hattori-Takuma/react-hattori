@@ -51,6 +51,7 @@ const ComponentB = () => {
 
 
 
+
   return (
 
     <div>
@@ -101,6 +102,21 @@ const ComponentB = () => {
         </thead>
         <tbody>
           {state.map((data, index) => {
+
+            const handleClick3 = () => {
+
+
+              dispatch({
+
+                type: POINT_DELET,
+                id: data.id,
+
+              });
+
+
+            };
+
+
             return (
               <tr key={index}>
                 <td>{data.id}</td>
@@ -108,7 +124,7 @@ const ComponentB = () => {
                 <td>{data.body}</td>
                 <td>{data.component}</td>
                 <td>
-                  <Button variant="danger" >削除</Button>
+                  <Button variant="danger" onClick={handleClick3} >削除</Button>
                 </td>
               </tr>
             );

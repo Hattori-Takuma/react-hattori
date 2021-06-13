@@ -17,6 +17,18 @@ const reducer = (state = [], action) => {
 
       return [];
 
+    case POINT_DELET:
+      const point = state.filter(state => state.id !== action.id);
+
+      return point
+
+
+
+
+
+
+
+
 
 
 
