@@ -13,7 +13,7 @@ const ComponentB = () => {
   const [state, dispatch] = useReducer(reducer, []);
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const [component, setComponent] = useState('');
+  const [comment, setComment] = useState('');
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -22,12 +22,12 @@ const ComponentB = () => {
       type: ADD_EVENT,
       title,
       body,
-      component
+      comment
     });
 
     setTitle('');
     setBody('');
-    setComponent('');
+    setComment('');
   };
 
   const handleClick2 = (e) => {
@@ -37,12 +37,12 @@ const ComponentB = () => {
       type: ALL_DELET,
       title,
       body,
-      component
+      comment
     });
 
     setTitle('');
     setBody('');
-    setComponent('');
+    setComment('');
   };
 
 
@@ -73,12 +73,12 @@ const ComponentB = () => {
             value={body}
             onChange={(e) => setBody(e.target.value)}
           />
-          <Form.Label>Component</Form.Label>
+          <Form.Label>Comment</Form.Label>
           <Form.Control
             type="text"
-            placeholder="component"
-            value={component}
-            onChange={(e) => setComponent(e.target.value)}
+            placeholder="comment"
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
           />
         </Form.Group>
         <Button variant="primary" onClick={handleClick}>
@@ -96,7 +96,7 @@ const ComponentB = () => {
             <th>id</th>
             <th>title</th>
             <th>body</th>
-            <th>component</th>
+            <th>comment</th>
             <th>#</th>
           </tr>
         </thead>
@@ -122,7 +122,7 @@ const ComponentB = () => {
                 <td>{data.id}</td>
                 <td>{data.title}</td>
                 <td>{data.body}</td>
-                <td>{data.component}</td>
+                <td>{data.comment}</td>
                 <td>
                   <Button variant="danger" onClick={handleClick3} >削除</Button>
                 </td>
