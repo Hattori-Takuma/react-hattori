@@ -4,6 +4,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Table, Button } from 'react-bootstrap';
 import reducer from '../reducers/index'
+import ComponentD from './ComponentD';
 
 
 const initialCount = {
@@ -67,6 +68,7 @@ const ComponentC = () => {
 
   return (
     <div>
+      <ComponentD />
       <div>
         ComponentC
     </div>

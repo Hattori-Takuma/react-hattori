@@ -4,6 +4,7 @@ import { ADD_EVENT, ALL_DELET, POINT_DELET } from '../actions/index';
 import reducer from '../reducers/index';
 import { Button, Form, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ComponentF from './ComponentF';
 
 
 
@@ -56,6 +57,7 @@ const ComponentB = () => {
 
     <div>
       <div>ComponentB</div>
+      <ComponentF />
       <Link to="componentc">ComponentCへ移動</Link>
       <Form>
         <Form.Group controlId="formBasicPassword">
@@ -93,6 +95,7 @@ const ComponentB = () => {
       <Table striped bordered hover>
         <thead>
           <tr>
+
             <th>id</th>
             <th>title</th>
             <th>body</th>
