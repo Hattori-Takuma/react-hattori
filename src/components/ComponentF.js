@@ -8,7 +8,6 @@ const ComponentF = () => {
     <div>
       <h1>ComponentF.js</h1>
 
-
     </div>
   );
 };
