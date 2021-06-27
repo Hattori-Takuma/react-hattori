@@ -23,7 +23,7 @@ const reducer = (state = [], action) => {
       return point
 
     case BUTTON:
-      if (state.count = 1) { return { ...state, count: state.count + 10 } } else { return { ...state, count: state.count + 0 } }
+      if (state.count % 3 === 0) { return { ...state, count: state.count + 10 } } else { return state }
   }
 
 
