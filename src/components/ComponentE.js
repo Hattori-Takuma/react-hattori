@@ -1,9 +1,42 @@
 import React, { useContext } from 'react';
 import { Store } from '../store/index';
 import { INCREMENT, DECREMENT, RESET, BUTTON } from '../actions/index';
+import { Table, } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ComponentE = () => {
   const { globalState, setGlobalState } = useContext(Store);
+
+
+
+
+  <Table striped bordered hover>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>userId</th>
+        <th>title</th>
+        <th>completed</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        globalState.todos.map((d, index) => {
+
+          return (
+            <tr key={index}>
+              <td>{d.id}</td>
+              <td>{d.userId}</td>
+              <td>{d.title}</td>
+              <td>{d.completed.toString()}</td>
+            </tr>
+          );
+        })
+      }
+    </tbody>
+  </Table>
+
+
   const handleClick = () => {
     setGlobalState({
       type: INCREMENT

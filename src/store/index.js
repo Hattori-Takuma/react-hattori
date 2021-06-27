@@ -1,8 +1,10 @@
 import React, { createContext, useReducer } from 'react';
 import reducer from '../reducers/index';
 const initialState = {
-  count: 0
+  count: 0,
+  todos: []
 };
+
 
 export const Store = createContext({
   globalState: initialState,

@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, RESET, ADD_EVENT, ALL_DELET, POINT_DELET, BUTTON } from '../actions/index'
+import { INCREMENT, DECREMENT, RESET, ADD_EVENT, ALL_DELET, POINT_DELET, BUTTON, TODOS } from '../actions/index'
 
 
 const reducer = (state = [], action) => {
@@ -23,9 +23,13 @@ const reducer = (state = [], action) => {
       return point
 
     case BUTTON:
+      if (state.count === 0) { return state }
       if (state.count % 3 === 0) { return { ...state, count: state.count + 10 } } else { return state }
-  }
 
+    case TODOS:
+      console.log(action.data)
+      return { ...state }
+  }
 
 };
 
