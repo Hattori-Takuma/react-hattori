@@ -30,3 +30,10 @@ cssから.jsに適応させる
         setData(res.data)
       })
   }
+
+
+
+  conAでsetglobalstateでreducsersを介してstoreに格納
+  conEでstoreから取り出してくる
+
+  

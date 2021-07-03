@@ -28,7 +28,12 @@ const reducer = (state = [], action) => {
 
     case TODOS:
       console.log(action.data)
-      return { ...state }
+      return { ...state, todos: action.data }
+
+
+
+
+
   }
 
 };
